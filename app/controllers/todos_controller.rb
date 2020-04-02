@@ -9,7 +9,6 @@ class TodosController < ApplicationController
     id = params[:id]
     todo = Todo.find(id)
     render plain: todo.to_displayable_string
-    Todo.delete(todo)
   end
 
   def create
@@ -21,5 +20,14 @@ class TodosController < ApplicationController
       completed: false,
     )
     render plain: "A new todo with id #{new_todo.id} is created"
+  end
+
+  def update
+    id = params[:id]
+    completed = params[:completed]
+    todo = Todo.find(id)
+    todo.completed = completed
+    todo.save!
+    render plain: "Updated todo (#{id}) status to #{completed}"
   end
 end
