@@ -94,7 +94,7 @@ body {
     visibility: visible;
 }
 
-.TodoCheckbox {
+.TodoItem-checkbox {
     height: 16px;
     width: 16px;
 }

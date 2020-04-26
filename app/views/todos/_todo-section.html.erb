@@ -11,7 +11,14 @@
     <% todos.each do |todo| %>
       <li class="TodoItem">
         <div class="TodoItem-container">
-          <input class="TodoCheckbox" type="checkbox" <%=todo.completed ? "checked" : ""%>>
+          <%= form_with(url: "/todos/#{todo.id}", method: "put") do %>
+            <input 
+              class="TodoItem-checkbox" 
+              name="completed" 
+              type="checkbox" <%=todo.completed ? "checked" : ""%>
+              onclick="this.form.submit()"
+            >
+          <% end %>
           <p style="<%= todo.completed ? "text-decoration: line-through" : "none"  %>">
             <%= todo.todo_text %>
           </p>
@@ -21,7 +28,9 @@
             </p>
           <% end %>
           <a class="TodoItem-delete" href="javascript:void(0)">
-            <img src="bin.svg">
+            <%= form_with(url: "/todos/#{todo.id}", method: "delete") do %>
+              <input type="image" src="bin.svg">
+            <% end %>
           </a>
         </div>
       </li>
