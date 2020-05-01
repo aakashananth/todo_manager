@@ -1,0 +1,15 @@
+<main class="LoginPage">
+  <p class="LoginPage-title">Sign in!</p>
+  <div class="LoginPage-credentials">
+    <%= form_with url:sessions_path do |form| %>
+      <p class="FormInput-label">Email:</p>
+      <%= form.email_field :email, class:"Form-input" %>
+      <p class="FormInput-label">Password:</p>
+      <%= form.password_field :password, class:"Form-input" %>
+      <div class="LoginPage-container">
+        <%= link_to "Create account", new_user_path, class: "LoginPage-redirect" %>
+        <%= form.submit "Sign-in", class: "Form-submit"%>
+      </div>
+    <% end %>
+  </div>
+</main>
