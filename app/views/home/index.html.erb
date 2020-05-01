@@ -1,0 +1,12 @@
+<main class="HomePageMain">
+  <%= image_tag("homepage", class: "HomePage-logo") %>
+  <section class="HomeSection">
+    <div class="HomeSection-container">
+      <p class="HomeSection-title">Existing User?</p>
+    </div>
+    <div class="HomeSection-container">
+      <p class="HomeSection-title">New User?</p>
+      <%= link_to "Sign up", new_user_path, class: "HomeSection-redirect" %>
+    </div>
+  </section>
+</main>

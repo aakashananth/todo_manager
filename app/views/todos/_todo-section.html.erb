@@ -1,3 +1,4 @@
+<hr class="BreakLine">
 <section class="TodoSection">
   <div class="TodoSectionTitle">
     <p class="TodoSectionTitle-text">
@@ -12,7 +13,7 @@
       <li class="TodoItem">
         <div class="TodoItem-container">
           <%= form_with(url: "/todos/#{todo.id}", method: "put") do %>
-            <%= check_box_tag "completed", "", todo.completed ? true : false, class: "TodoItem-checkbox", onclick: "this.form.submit()" %>
+            <%= check_box_tag "completed", "completed", todo.completed ? true : false, class: "TodoItem-checkbox", onclick: "this.form.submit()" %>
           <% end %>
           <p style="<%= todo.completed ? "text-decoration: line-through" : "none"  %>">
             <%= todo.todo_text %>

@@ -1,0 +1,43 @@
+.HomePageMain {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.HomePage-logo {
+    height: 100px;
+    margin-bottom: 100px;
+}
+
+.HomeSection {
+    margin: auto;
+    max-width: 400px;
+}
+
+.HomeSection-container {
+    display: flex;
+    border: 2px solid #f1edf7;
+    border-radius: 4px;
+    align-items: stretch;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.HomeSection-title {
+    font-size: 28px;
+    color: #555555;
+    width: 350px;
+    height: 30px;
+    padding: 5px;
+}
+
+.HomeSection-redirect {
+    text-align: center;
+    font-size: 22px;
+    background-color: #f1edf7;
+    color: black;
+    width: 150px;
+    text-decoration: none;
+    height: 22px;
+    padding: 9px;
+}

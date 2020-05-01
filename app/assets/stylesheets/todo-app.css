@@ -1,5 +1,4 @@
-body {
-    font-family: sans-serif;
+.TodoPageMain {
     max-width: 430px;
     margin: 0 auto;
     margin-top: 60px;
@@ -11,6 +10,10 @@ body {
     margin-bottom: 12px;
     height: 27px;
     font-weight: 600;
+}
+
+.BreakLine {
+    border: 0.5px solid #dadce0;
 }
 
 .AddTodo {

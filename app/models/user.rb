@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-  def to_displayable_string
-    "#{id}. #{name}"
-  end
+  has_secure_password
+  has_many :todos
 end

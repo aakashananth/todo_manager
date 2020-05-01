@@ -1,0 +1,19 @@
+<main class="SignUpPage">
+  <p class="LoginPage-title">Sign up!</p>
+  <div class="LoginPage-credentials">
+    <%= form_with url:users_path do |form| %>
+      <p class="FormInput-label">First Name:</p>
+      <%= form.text_field :first_name,class:"Form-input" %>
+      <p class="FormInput-label">Last Name:</p>
+      <%= form.text_field :last_name, class:"Form-input"%>
+      <p class="FormInput-label">Email:</p>
+      <%= form.email_field :email, class:"Form-input" %>
+      <p class="FormInput-label">Password:</p>
+      <%= form.password_field :password, class:"Form-input" %>
+      <div class="LoginPage-container">
+        <%= link_to "Sign in instead", new_user_path, class: "LoginPage-redirect" %>
+        <%= form.submit "Sign-up", class: "Form-submit"%>
+      </div>
+    <% end %>
+  </div>
+</main>
