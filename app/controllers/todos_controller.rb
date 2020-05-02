@@ -16,6 +16,7 @@ class TodosController < ApplicationController
       todo_text: todo_text,
       due_date: due_date,
       completed: false,
+      user_id: @current_user.id,
     )
     redirect_to todos_path
   end

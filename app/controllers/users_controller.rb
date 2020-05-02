@@ -1,8 +1,12 @@
 class UsersController < ApplicationController
-  skip_before_action :verify_authenticity_token
+  skip_before_action :ensure_user_logged_in
 
   def new
-    render "users/new"
+    if current_user
+      redirect_to todos_path
+    else
+      render "new"
+    end
   end
 
   def create

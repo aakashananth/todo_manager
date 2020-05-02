@@ -17,3 +17,33 @@
 body {
     font-family: 'Google Sans', arial, sans-serif;
 }
+
+.AppMain {
+    max-width: 430px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.AppMain-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.AppMain-title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.AppMain-signout {
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #1a73e8;
+    background-color: #fff;
+    padding: 2px 2px;
+    font-size: 16px;
+}
+
+.BreakLine {
+    border: 0.5px solid #dadce0;
+    margin-bottom: 20px;
+}
