@@ -8,14 +8,12 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <main class="AppMain">
-      <% if @current_user %>
-        <div class="AppMain-header">
-          <p class="AppMain-title"> Welcome <%= @current_user.first_name %>! </p>
-          <%= link_to "Sign-out", destroy_session_path, method: "delete", class: "AppMain-signout" %>
-        </div>
-        <hr class="BreakLine">
-      <% end %>
-      <%= yield %>
-    </main>
+    <% if @current_user %>
+      <div class="AppHeader">
+        <p class="AppHeader-title"> Welcome <%= @current_user.first_name %>! </p>
+        <%= button_to "Sign-out", destroy_session_path, method: :delete, class: "AppHeader-signout" %>
+      </div>
+      <hr class="BreakLine">
+    <% end %>
+    <%= yield %>
   </html>

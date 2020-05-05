@@ -15,7 +15,8 @@ class SessionsController < ApplicationController
       session[:current_user_id] = user.id
       redirect_to "/todos"
     else
-      render plain: "Invalid Credentials"
+      redirect_to new_sessions_path
+      flash[:error] = "Invalid credentials. Please try again!"
     end
   end
 

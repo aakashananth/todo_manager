@@ -1,5 +1,10 @@
 <main class="LoginPage">
   <p class="LoginPage-title">Sign in!</p>
+  <% if flash[:error] %>
+    <p class="FlashMessage">
+      <%= flash[:error] %>
+    </p>
+  <% end %>
   <div class="LoginPage-credentials">
     <%= form_with url:sessions_path do |form| %>
       <p class="FormInput-label">Email:</p>

@@ -1,4 +1,5 @@
 class Todo < ActiveRecord::Base
+  validates :todo_text, :due_date, presence: true
   belongs_to :user
 
   def to_displayable_string

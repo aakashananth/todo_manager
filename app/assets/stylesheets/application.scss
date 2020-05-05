@@ -18,23 +18,20 @@ body {
     font-family: 'Google Sans', arial, sans-serif;
 }
 
-.AppMain {
-    max-width: 430px;
+.AppHeader {
+    max-width: 440px;
     margin: 0 auto;
     margin-top: 30px;
-}
-
-.AppMain-header {
     display: flex;
     justify-content: space-between;
 }
 
-.AppMain-title {
+.AppHeader-title {
     font-size: 20px;
     font-weight: 600;
 }
 
-.AppMain-signout {
+.AppHeader-signout {
     border: 1px solid transparent;
     border-radius: 4px;
     color: #1a73e8;
@@ -44,6 +41,14 @@ body {
 }
 
 .BreakLine {
+    width: 440px;
     border: 0.5px solid #dadce0;
     margin-bottom: 20px;
+}
+
+.FlashMessage {
+    text-align: center;
+    color: #d93025;
+    font-size: 12px;
+    margin-bottom: 10px;
 }
