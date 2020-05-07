@@ -8,7 +8,7 @@
   <div class="LoginPage-credentials">
     <%= form_with url:users_path do |form| %>
       <p class="FormInput-label">First Name:</p>
-      <%= form.text_field :first_name,class:"Form-input" %>
+      <%= form.text_field :first_name,class:"Form-input", autofocus: "autofocus" %>
       <p class="FormInput-label">Last Name:</p>
       <%= form.text_field :last_name, class:"Form-input"%>
       <p class="FormInput-label">Email:</p>
